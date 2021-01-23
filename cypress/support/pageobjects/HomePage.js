@@ -11,6 +11,11 @@ class HomePage {
       homeElements.inputProduct(product);
       homeElements.buttonSubmit();
     }
+
+    searchElement(element){
+      homeElements.inputProduct(element);
+      homeElements.buttonSubmit();
+    }
 }
 
 export default HomePage;
