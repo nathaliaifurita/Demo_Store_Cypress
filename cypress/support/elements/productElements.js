@@ -1,5 +1,5 @@
-class productElements {
+class ProductElements {
   addToCart = () => 'button[id*="button_cart"]';
 }
 
-export default productElements;
+export default ProductElements;

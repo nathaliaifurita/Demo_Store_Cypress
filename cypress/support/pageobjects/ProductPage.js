@@ -1,11 +1,11 @@
-import productElements from '../elements/productElements'
-const productElements = new productElements
-const url = Cypress.config("baseUrl")
+import ProductElements from '../elements/ProductElements';
+const productElements = new ProductElements();
+const url = Cypress.config("baseUrl");
 
 class ProductPage {
-    addProductToCart() {
-      productElements.addProductToCart();
-    }
+  addProductToCart() {
+    cy.get(productElements.addToCart()).click();
   }
+}
 
 export default ProductPage;

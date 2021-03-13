@@ -1,10 +1,10 @@
-import searchResultElements from '../elements/searchResultElements'
-const searchResultElements = new searchResultElements
+import SearchResultElements from '../elements/SearchResultElements';
+const searchResultElements = new SearchResultElements();
 const url = Cypress.config("baseUrl")
 
 class SearchResultPage {
-    viewProductSearched() {
-      searchResultElements.viewProduct().click();
+  viewProductSearched() {
+      cy.get(searchResultElements.viewProduct()).click();
     }
   }
 

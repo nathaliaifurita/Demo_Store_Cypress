@@ -1,5 +1,5 @@
-import homeElements from '../elements/homeElements'
-const homeElements = new homeElements
+import HomeElements from '../elements/HomeElements';
+const homeElements = new HomeElements();
 const url = Cypress.config("baseUrl")
 
 class HomePage {

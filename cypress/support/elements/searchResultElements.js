@@ -1,5 +1,5 @@
-class searchResultElements {
+class SearchResultElements {
   viewProduct = () => '.ty-grid-list__image';
 }
 
-export default searchResultElements;
+export default SearchResultElements;
