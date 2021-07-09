@@ -16,5 +16,14 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+module.exports = (on, config) => {
+    on('before:browser:launch', (browser, launchOptions) => {
+      if (browser.name === 'chrome' && browser.isHeadless) {
+        launchOptions.args.push('--disable-gpu');
+        return launchOptions
+      }
+    });
+  }
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
