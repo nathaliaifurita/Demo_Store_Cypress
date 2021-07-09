@@ -2,5 +2,5 @@
   "viewportWidth": 1024,
   "viewportHeight": 768,
   "defaultCommandTimeout": 10000,
-  "baseUrl": "https://demo.cs-cart.com/"
+  "baseUrl": "https://automacaocombatista.herokuapp.com/treinamento/home"
 }

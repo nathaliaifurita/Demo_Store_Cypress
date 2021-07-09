@@ -1,5 +1,3 @@
-import HomeElements from '../elements/HomeElements';
-const homeElements = new HomeElements();
 const url = Cypress.config("baseUrl")
 
 class HomePage {
@@ -7,14 +5,9 @@ class HomePage {
       cy.visit(url);
     }
 
-    searchProduct(product){
-      homeElements.inputProduct(product);
-      homeElements.buttonSubmit();
-    }
-
-    searchElement(element){
-      homeElements.inputProduct(element);
-      homeElements.buttonSubmit();
+    accessForm(){
+      cy.contains('Formulário').click()
+      cy.get('a[href="/users/new"]').click()
     }
 }
 
