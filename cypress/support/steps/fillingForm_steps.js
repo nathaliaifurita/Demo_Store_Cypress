@@ -13,5 +13,7 @@ When("I fill the form", () => {
 })
 
 Then("the form should be saved", () => {
-    formPage.getName();
+    // formPage.getName();
+    // cy.get('#user_name').should('be.empty')
+    expect('#user_name').should('be.empty');
 })

@@ -11,10 +11,6 @@ class FormPage {
         cy.get('#user_age').type('23')
         cy.contains('Criar').click()
     }
-
-    getName(){
-        cy.get('#user_name').should('be.empty')
-    }
 }
 
 export default FormPage;
