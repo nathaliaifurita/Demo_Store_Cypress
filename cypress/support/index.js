@@ -15,6 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+// cy.faker = require('faker');
 
 module.exports = (on, config) => {
     on('before:browser:launch', (browser, launchOptions) => {

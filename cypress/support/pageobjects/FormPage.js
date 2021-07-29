@@ -1,14 +1,16 @@
+const faker = require('faker');
+const genders = ['male', 'female', 'neuter', 'common'];
 
 class FormPage {
     fillFields() {
-        cy.get('#user_name').type('Dorothy')
-        cy.get('#user_lastname').type('de OZasco')
-        cy.get('#user_email').type('dorothydeozasco@teste.com')
-        cy.get('#user_address').type('Rua famosa de Osasco, 70')
-        cy.get('#user_university').type('Universidade de Ozasco')
-        cy.get('#user_profile').type('Analista de Teste')
-        cy.get('#user_gender').type('Feminino')
-        cy.get('#user_age').type('23')
+        cy.get('#user_name').type(faker.name.firstName())
+        cy.get('#user_lastname').type(faker.name.lastName())
+        cy.get('#user_email').type(faker.internet.email())
+        cy.get('#user_address').type(faker.address.streetAddress())
+        cy.get('#user_university').type(faker.address.city() + ' University')
+        cy.get('#user_profile').type(faker.name.jobTitle())
+        cy.get('#user_gender').type(faker.random.arrayElement(genders))
+        cy.get('#user_age').type(faker.datatype.number(100))
         cy.contains('Criar').click()
     }
 }
